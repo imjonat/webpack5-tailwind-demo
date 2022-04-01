@@ -152,5 +152,6 @@ module.exports = {
 
     'react/self-closing-comp': 'warn',
     'prefer-template': 'warn',
+    '@typescript-eslint/space-before-blocks': 'off',
   },
 }

@@ -6,7 +6,6 @@ import ESLintPlugin from 'eslint-webpack-plugin'
 import { CleanWebpackPlugin } from 'clean-webpack-plugin'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
 import CssMinimizerPlugin from 'css-minimizer-webpack-plugin'
-import UglifyJsPlugin from 'uglifyjs-webpack-plugin'
 import CompressionPlugin from 'compression-webpack-plugin'
 import TerserPlugin from 'terser-webpack-plugin'
 import WebpackBar from 'webpackbar'
@@ -53,7 +52,6 @@ const config: webpack.Configuration = {
       filename: `${cssprefix}/[contenthash:8].css`,
       chunkFilename: `${cssprefix}/[contenthash:8].css`,
     }),
-    new UglifyJsPlugin(),
     new CompressionPlugin({
       test: /\.js$|\.css$/,
       algorithm: 'gzip',

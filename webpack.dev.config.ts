@@ -4,10 +4,7 @@ import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin'
 import ESLintPlugin from 'eslint-webpack-plugin'
 import WebpackBar from 'webpackbar'
 import { rules } from './webpack.common.config'
-import {
-  Configuration as WebpackConfiguration,
-  HotModuleReplacementPlugin,
-} from 'webpack'
+import { Configuration as WebpackConfiguration, HotModuleReplacementPlugin } from 'webpack'
 import { Configuration as WebpackDevServerConfiguration } from 'webpack-dev-server'
 
 interface Configuration extends WebpackConfiguration {
@@ -49,7 +46,7 @@ const config: Configuration = {
     hints: false,
   },
   devServer: {
-    contentBase: path.join(__dirname, 'public'),
+    static: path.join(__dirname, 'public'),
     historyApiFallback: {
       index: '/',
     },
@@ -57,7 +54,9 @@ const config: Configuration = {
     port: 8080,
     hot: true,
     compress: true,
-    writeToDisk: true,
+    devMiddleware: {
+      writeToDisk: true,
+    },
   },
 }
 
