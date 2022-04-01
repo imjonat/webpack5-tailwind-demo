@@ -22,6 +22,6 @@
     },
     "typeRoots": ["./typings/", "./node_modules/@types/"]
   },
-  "include": ["./src/**/*"],
-  "exclude": ["node_modules"]
+  "include": ["./**/*"],
+  "exclude": ["node_modules", "./**/*.json"]
 }

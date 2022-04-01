@@ -46,7 +46,7 @@ module.exports = {
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
 
-    '@typescript-eslint/ban-ts-comment': 'warn',
+    '@typescript-eslint/ban-ts-comment': 'off',
     '@typescript-eslint/semi': 'off',
     '@typescript-eslint/member-delimiter-style': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
@@ -106,7 +106,7 @@ module.exports = {
     camelcase: 'off',
 
     '@typescript-eslint/prefer-namespace-keyword': 'error',
-    '@typescript-eslint/quotes': ['error', 'single'],
+    '@typescript-eslint/quotes': ['warn', 'single'],
     '@typescript-eslint/type-annotation-spacing': 'error',
     'brace-style': ['error', '1tbs'],
     'comma-dangle': ['warn', 'always-multiline'],
@@ -152,5 +152,6 @@ module.exports = {
 
     'react/self-closing-comp': 'warn',
     'prefer-template': 'warn',
+    '@typescript-eslint/space-before-blocks': 'off',
   },
 }
